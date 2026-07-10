@@ -1,5 +1,5 @@
 export const CONTACT = {
-  whatsappDigits: "5491163732393",
+  whatsappDigits: "5491134675590",
   phonePretty: "11 6373-2393",
   instagram: "https://instagram.com/serviciosnunez",
   facebook: "https://facebook.com/serviciosnunez",
@@ -57,7 +57,7 @@ export const TRADES: Trade[] = [
         a: "Es el pedido más común: revisamos el tablero, medimos los circuitos y encontramos la fuga o la falla. En general se resuelve en la misma visita.",
       },
       {
-        q: "¿Hacés trabajos chicos?",
+        q: "¿Hacés trabajos de mantenimiento?",
         a: "Sí. Un toma flojo, una llave de luz, un ventilador de techo: ningún trabajo es demasiado chico.",
       },
     ],
@@ -80,7 +80,7 @@ export const TRADES: Trade[] = [
     faqs: [
       {
         q: "¿Atendés urgencias fuera de horario?",
-        a: "El horario habitual es de 7 a 19 hs, pero hay disponibilidad 24 hs para urgencias. Una pérdida de agua no espera: escribinos a cualquier hora.",
+        a: "El horario habitual es de 07:00 a 19:00 hs, pero hay disponibilidad 24 hs para urgencias. Una pérdida de agua no espera: escribinos a cualquier hora.",
       },
       {
         q: "¿Vas a tener que romper la pared?",

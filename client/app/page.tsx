@@ -1,33 +1,13 @@
 import Link from "next/link";
-import StatusBar from "./components/StatusBar";
-import SectionLabel from "./components/SectionLabel";
-import Hero from "./components/Hero";
-import PageFooter from "./components/PageFooter";
-import WhatsAppBar from "./components/WhatsAppBar";
-import CtaPanel from "./components/CtaPanel";
-import DesktopSplit from "./components/DesktopSplit";
+import Header from "./components/header/Header";
+import Coverage from "./components/section/Coverage";
+import HowWeWork from "./components/section/HowWeWork";
+import Hero from "./components/ui/Hero";
+import DesktopSplit from "./components/ui/DesktopSplit";
+import PageFooter from "./components/footer/PageFooter";
+import WhatsAppBar from "./components/whatsapp/WhatsAppBar";
+import CtaPanel from "./components/whatsapp/CtaPanel";
 import { GENERIC_WA_MESSAGE, TRADES, waLink } from "./lib/trades";
-
-function Header() {
-  return (
-    <header className="flex items-center gap-3 border-b border-line px-5 py-4 lg:px-8">
-      <div className="flex size-[42px] flex-none items-center justify-center rounded-lg bg-navy font-mono text-sm font-bold text-paper">
-        SN
-      </div>
-      <div className="flex min-w-0 flex-1 flex-col gap-px">
-        <span className="font-mono text-[10px] tracking-[2.5px] text-ink-muted">
-          SERVICIOS
-        </span>
-        <span className="text-[21px] leading-none font-extrabold tracking-[-0.3px]">
-          NUÑEZ
-        </span>
-      </div>
-      <span className="rounded-[3px] border border-blue px-2 py-[5px] font-mono text-[10px] tracking-[1.5px] whitespace-nowrap text-blue">
-        24 HS
-      </span>
-    </header>
-  );
-}
 
 function TradesNav() {
   return (
@@ -36,7 +16,7 @@ function TradesNav() {
         <Link
           key={t.slug}
           href={`/${t.slug}`}
-          className="grid grid-cols-[44px_1fr_24px] items-center gap-2 border-b border-line px-5 py-[22px] hover:bg-row-hover lg:px-8 lg:py-7"
+          className="grid grid-cols-[44px_1fr_30px] items-center gap-2 border-b border-line px-5 py-[22px] hover:bg-row-hover lg:px-8 lg:py-7 xl:px-14"
         >
           <span className="font-mono text-[13px] font-bold text-blue">
             {t.code}
@@ -49,37 +29,10 @@ function TradesNav() {
               {t.line}
             </span>
           </span>
-          <span className="justify-self-end text-[19px] text-blue">→</span>
+          <span className="justify-self-end text-[26px] text-blue">→</span>
         </Link>
       ))}
     </nav>
-  );
-}
-
-const ZONES = [
-  ["CABA", "todos los barrios"],
-  ["GBA", "Gran Buenos Aires"],
-];
-
-function Coverage() {
-  return (
-    <div className="border-b border-line px-5 py-6 lg:border-b-0 lg:px-8">
-      <SectionLabel className="mb-3.5">ZONA DE COBERTURA</SectionLabel>
-      <div className="flex gap-2">
-        {ZONES.map(([zone, detail]) => (
-          <div
-            key={zone}
-            className="flex flex-1 flex-col gap-[3px] rounded-[3px] border border-line-strong px-3.5 py-3"
-          >
-            <span className="font-mono text-[15px] font-bold">{zone}</span>
-            <span className="text-[12.5px] text-ink-muted">{detail}</span>
-          </div>
-        ))}
-      </div>
-      <p className="mt-3.5 text-[13.5px] text-ink-muted">
-        Consultanos por tu zona antes de pedir la visita.
-      </p>
-    </div>
   );
 }
 
@@ -88,7 +41,6 @@ export default function Home() {
   return (
     <>
       <Header />
-      <StatusBar />
       <DesktopSplit
         left={
           <>
@@ -102,6 +54,7 @@ export default function Home() {
                 en minutos.
               </p>
             </Hero>
+            <HowWeWork />
             <CtaPanel href={wa} />
           </>
         }

@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import StatusBar from "../components/StatusBar";
-import SectionLabel from "../components/SectionLabel";
-import Hero from "../components/Hero";
-import FaqList from "../components/FaqList";
-import PageFooter from "../components/PageFooter";
-import WhatsAppBar from "../components/WhatsAppBar";
-import CtaPanel from "../components/CtaPanel";
-import DesktopSplit from "../components/DesktopSplit";
+import StatusBar from "../components/header/StatusBar";
+import SectionLabel from "../components/ui/SectionLabel";
+import Hero from "../components/ui/Hero";
+import DesktopSplit from "../components/ui/DesktopSplit";
+import FaqList from "../components/faq/FaqList";
+import PageFooter from "../components/footer/PageFooter";
+import WhatsAppBar from "../components/whatsapp/WhatsAppBar";
+import CtaPanel from "../components/whatsapp/CtaPanel";
+import HowWeWork from "../components/section/HowWeWork";
 import { TRADES, waLink, type Trade } from "../lib/trades";
 
 type Params = Promise<{ trade: string }>;
@@ -34,7 +35,7 @@ export async function generateMetadata({
 
 function Header() {
   return (
-    <header className="flex items-center justify-between border-b border-line px-5 py-4 lg:px-8">
+    <header className="flex items-center justify-between border-b border-line px-5 py-4 lg:px-8 xl:px-14">
       <Link href="/" className="py-1.5 font-mono text-xs tracking-[1px] text-blue">
         ← INICIO
       </Link>
@@ -47,7 +48,7 @@ function Header() {
 
 function Services({ trade }: { trade: Trade }) {
   return (
-    <div className="border-b border-line px-5 py-6 lg:px-8">
+    <div className="border-b border-line px-5 py-6 lg:px-8 xl:px-14">
       <SectionLabel className="mb-1.5">QUÉ HACEMOS</SectionLabel>
       <div className="flex flex-col">
         {trade.services.map((s) => (
@@ -89,13 +90,14 @@ export default async function TradePage({ params }: { params: Params }) {
                 </p>
               )}
             </Hero>
+            <HowWeWork />
             <CtaPanel href={wa} />
           </>
         }
         right={
           <>
             <Services trade={trade} />
-            <div className="px-5 pt-6 pb-2.5 lg:px-8 lg:pb-6">
+            <div className="px-5 pt-6 pb-2.5 lg:px-8 lg:pb-6 xl:px-14">
               <SectionLabel className="mb-1.5">
                 PREGUNTAS FRECUENTES
               </SectionLabel>

@@ -10,7 +10,7 @@ export default function PageFooter({
   brand: string;
 }) {
   return (
-    <footer className="flex flex-col gap-3.5 px-5 py-5 lg:flex-row lg:items-center lg:justify-between lg:border-t lg:border-line lg:px-8 lg:py-6">
+    <footer className="flex flex-col gap-3.5 px-5 py-5 lg:flex-row lg:items-center lg:justify-between lg:border-t lg:border-line lg:px-8 lg:py-6 xl:px-14">
       <SocialLinks waHref={waHref} />
       <div className="flex flex-col gap-2 lg:items-end">
         {note && (
@@ -20,6 +20,9 @@ export default function PageFooter({
         )}
         <span className="font-mono text-[10.5px] tracking-[1.5px] text-ink-faint">
           {brand}
+        </span>
+        <span className="font-mono text-[9.5px] tracking-[1.5px] text-ink-faint">
+          POWERED BY BYTEK TECHNOLOGY
         </span>
       </div>
     </footer>
