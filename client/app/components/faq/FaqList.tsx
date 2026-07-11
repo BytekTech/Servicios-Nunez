@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import type { Faq } from "../../lib/trades";
+import type { Faq } from "../../types/trade";
 import FaqItem from "./FaqItem";
 
-export default function FaqList({ faqs }: { faqs: Faq[] }) {
+export default function FaqList({ faqs }: Readonly<{ faqs: readonly Faq[] }>) {
   const [open, setOpen] = useState(-1);
 
   return (

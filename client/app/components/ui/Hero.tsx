@@ -5,12 +5,12 @@ export default function Hero({
   title,
   big = false,
   children,
-}: {
+}: Readonly<{
   label: string;
   title: string;
   big?: boolean;
   children?: React.ReactNode;
-}) {
+}>) {
   return (
     <div className="border-b border-line px-5 pt-7 pb-6 lg:px-8 lg:pt-10 lg:pb-8 xl:px-14 xl:pt-14">
       <SectionLabel className="mb-3.5">{label}</SectionLabel>

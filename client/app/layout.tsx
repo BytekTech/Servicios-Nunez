@@ -35,8 +35,10 @@ export default function RootLayout({
       className={`${archivo.variable} ${sometypeMono.variable} antialiased`}
     >
       <body className="font-sans text-ink">
-        <div className="mx-auto flex min-h-screen w-full max-w-[520px] flex-col border-x border-line bg-paper pb-[118px] lg:max-w-none lg:border-x-0 lg:pb-0">
-          {children}
+        <div className="min-h-screen w-full bg-paper">
+          <div className="mx-auto flex min-h-screen w-full max-w-[520px] flex-col pb-[118px] md:max-w-[760px] lg:max-w-[880px] lg:pb-[96px] xl:max-w-[960px]">
+            {children}
+          </div>
         </div>
       </body>
     </html>

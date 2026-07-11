@@ -1,0 +1,81 @@
+[
+  {
+    "code": "01",
+    "title": "Aceptación de los términos",
+    "body": [
+      "El acceso y la navegación de este sitio implican la aceptación plena de estos términos y condiciones. Si no estás de acuerdo con alguno de sus puntos, te pedimos que no utilices el sitio.",
+      "Estos términos se aplican a todo el contenido del sitio y a cualquier comunicación iniciada a través de él, incluidos los contactos por WhatsApp."
+    ]
+  },
+  {
+    "code": "02",
+    "title": "Objeto del sitio",
+    "body": [
+      "Este sitio tiene fines informativos: presenta los servicios de electricidad, plomería y gas que ofrece Servicios Nuñez en CABA y GBA, y facilita el contacto por WhatsApp.",
+      "La información publicada no constituye una oferta vinculante. Las condiciones concretas de cada trabajo (alcance, costo y plazos) se acuerdan en cada caso mediante el presupuesto correspondiente."
+    ]
+  },
+  {
+    "code": "03",
+    "title": "Presupuestos",
+    "body": [
+      "Los presupuestos son sin cargo y se elaboran en base a la información brindada por el cliente. Si al realizar la visita se detectan condiciones distintas a las informadas, el presupuesto puede ajustarse antes de iniciar el trabajo, siempre con conformidad previa del cliente.",
+      "Salvo indicación en contrario, los presupuestos tienen una validez de 7 días corridos desde su envío."
+    ]
+  },
+  {
+    "code": "04",
+    "title": "Garantía de los trabajos",
+    "body": [
+      "Los trabajos realizados cuentan con garantía por escrito, cuyo alcance y plazo se detallan al finalizar cada trabajo.",
+      "La garantía cubre defectos de la mano de obra realizada. No cubre daños causados por terceros, mal uso, intervenciones posteriores de otras personas, ni fallas en materiales o instalaciones preexistentes ajenas al trabajo realizado."
+    ]
+  },
+  {
+    "code": "05",
+    "title": "Responsabilidad",
+    "body": [
+      "Ponemos el máximo cuidado en mantener la información del sitio actualizada y correcta, pero no garantizamos que esté libre de errores u omisiones, ni la disponibilidad ininterrumpida del sitio.",
+      "Servicios Nuñez no se responsabiliza por daños derivados del uso del sitio ni de sitios de terceros enlazados desde él (por ejemplo, WhatsApp o redes sociales), cuyos términos y políticas son propios de cada plataforma."
+    ]
+  },
+  {
+    "code": "06",
+    "title": "Propiedad intelectual",
+    "body": [
+      "Todos los contenidos del sitio —textos, marca, logotipos, diseño, estructura, código y fotografías— son propiedad de Servicios Nuñez o se utilizan con autorización de sus titulares, y están protegidos por la normativa de propiedad intelectual vigente (Ley 11.723 y concordantes).",
+      "Queda prohibida su reproducción, distribución, transformación o comunicación pública, total o parcial, con fines comerciales y sin autorización previa y por escrito."
+    ]
+  },
+  {
+    "code": "07",
+    "title": "Uso automatizado, scraping y entrenamiento de IA",
+    "body": [
+      "Queda expresamente prohibido, sin autorización previa y por escrito de Servicios Nuñez: (a) el acceso automatizado al sitio mediante bots, scrapers, crawlers, spiders o agentes autónomos, con la única excepción de la indexación de buscadores de acceso público; (b) la extracción, recolección o minería de textos y datos (text and data mining) sobre el contenido del sitio; (c) el uso del contenido, en todo o en parte, para entrenar, ajustar (fine-tuning), validar, evaluar o alimentar modelos de inteligencia artificial o de aprendizaje automático, incluidos los modelos generativos, con independencia de su finalidad comercial o no comercial.",
+      "Servicios Nuñez se reserva expresamente todos los derechos sobre los contenidos del sitio a los fines de la minería de textos y datos y de cualquier uso vinculado al desarrollo de sistemas de IA. Esta reserva constituye una exclusión (opt-out) oponible a cualquier tercero.",
+      "Tampoco está permitido utilizar sistemas de IA para generar contenido que reproduzca de manera sustancialmente similar los textos, la marca o la identidad visual del sitio, ni para suplantar la identidad de Servicios Nuñez en cualquier medio."
+    ]
+  },
+  {
+    "code": "08",
+    "title": "Datos personales",
+    "body": [
+      "Los datos que nos compartas al contactarnos (nombre, teléfono, dirección, fotos del problema) se utilizan únicamente para elaborar el presupuesto y coordinar el trabajo. No vendemos ni cedemos tus datos a terceros.",
+      "Podés solicitar la actualización o eliminación de tus datos escribiéndonos por WhatsApp. El tratamiento se realiza conforme a la Ley 25.326 de Protección de los Datos Personales."
+    ]
+  },
+  {
+    "code": "09",
+    "title": "Modificaciones",
+    "body": [
+      "Servicios Nuñez puede actualizar estos términos en cualquier momento para reflejar cambios en los servicios o en la normativa aplicable. La versión vigente es la publicada en esta página, con su fecha de última actualización."
+    ]
+  },
+  {
+    "code": "10",
+    "title": "Ley aplicable y jurisdicción",
+    "body": [
+      "Estos términos se rigen por las leyes de la República Argentina. Ante cualquier controversia, serán competentes los tribunales ordinarios de la Ciudad Autónoma de Buenos Aires, sin perjuicio de los derechos que asistan al consumidor conforme a la Ley 24.240 de Defensa del Consumidor."
+    ]
+  }
+]

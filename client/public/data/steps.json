@@ -1,0 +1,17 @@
+[
+  {
+    "code": "01",
+    "title": "Escribinos por WhatsApp",
+    "detail": "Contanos el problema y, si podés, mandá una foto o video detallado."
+  },
+  {
+    "code": "02",
+    "title": "Presupuesto sin cargo",
+    "detail": "Te respondemos en minutos con el costo y cuándo podemos ir. Si nos mandás una foto o video detallado del problema, el presupuesto no se cobra."
+  },
+  {
+    "code": "03",
+    "title": "Trabajo con garantía",
+    "detail": "Lo resolvemos y te queda la garantía por escrito."
+  }
+]

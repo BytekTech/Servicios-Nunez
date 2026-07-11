@@ -18,6 +18,7 @@ AGENTS.md
 
 # testing
 /coverage
+/tests
 
 # next.js
 /.next/

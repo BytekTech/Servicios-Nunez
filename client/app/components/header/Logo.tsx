@@ -5,10 +5,10 @@ export default function Logo() {
         SN
       </div>
       <div className="flex min-w-0 flex-1 flex-col gap-px">
-        <span className="font-mono text-[10px] tracking-[2.5px] text-ink-muted">
+        <span className="font-mono text-[10px] tracking-[2.5px] text-ink-muted lg:text-[11.5px]">
           SERVICIOS
         </span>
-        <span className="text-[21px] leading-none font-extrabold tracking-[-0.3px]">
+        <span className="text-[21px] leading-none font-extrabold tracking-[-0.3px] lg:text-[23px]">
           NUÑEZ
         </span>
       </div>
