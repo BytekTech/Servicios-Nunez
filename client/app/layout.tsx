@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo, Sometype_Mono } from "next/font/google";
+import ScrollReveal from "./components/ui/ScrollReveal";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -17,7 +18,7 @@ const sometypeMono = Sometype_Mono({
 export const metadata: Metadata = {
   title: "Servicios Nuñez — Electricista, plomero y gasista matriculado",
   description:
-    "Electricidad, plomería y gas en CABA y GBA. Urgencias 24 hs, presupuesto sin cargo y garantía por escrito. Escribinos por WhatsApp.",
+    "Electricidad, plomería y gas en CABA y GBA. Urgencias 24 hs, presupuesto virtual sin cargo y garantía por escrito. Escribinos por WhatsApp.",
 };
 
 export const viewport: Viewport = {
@@ -35,8 +36,9 @@ export default function RootLayout({
       className={`${archivo.variable} ${sometypeMono.variable} antialiased`}
     >
       <body className="font-sans text-ink">
+        <ScrollReveal />
         <div className="min-h-screen w-full bg-paper">
-          <div className="mx-auto flex min-h-screen w-full max-w-[520px] flex-col pb-[118px] md:max-w-[760px] lg:max-w-[880px] lg:pb-[96px] xl:max-w-[960px]">
+          <div className="mx-auto flex min-h-screen w-full max-w-[520px] flex-col pb-[118px] md:max-w-[760px] lg:max-w-[880px] lg:pb-[96px] xl:max-w-none xl:pb-[104px]">
             {children}
           </div>
         </div>

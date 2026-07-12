@@ -19,7 +19,7 @@
     "faqs": [
       {
         "q": "¿Cobrás la visita?",
-        "a": "El presupuesto es sin cargo dentro de la zona de cobertura. Si el trabajo se hace, la visita no se cobra."
+        "a": "Si nos mandás una foto o un video detallado del problema, el presupuesto no se cobra. Y si el trabajo se hace, la visita tampoco."
       },
       {
         "q": "Salta la térmica y no sé por qué.",
@@ -37,7 +37,7 @@
     "name": "Plomería",
     "line": "griferías · tanques · cañerías",
     "tagline": "Griferías, tanques y cañerías, sin romper de más.",
-    "cred": "PRESUPUESTO SIN CARGO · GARANTÍA POR ESCRITO",
+    "cred": "PRESUPUESTO VIRTUAL SIN CARGO · GARANTÍA POR ESCRITO",
     "urgent": "",
     "waMsg": "Hola, necesito un plomero. Mi consulta es por: ",
     "services": [

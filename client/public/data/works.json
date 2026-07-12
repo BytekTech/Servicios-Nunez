@@ -1,0 +1,17 @@
+[
+  {
+    "trade": "electricidad",
+    "title": "Tablero nuevo con térmicas",
+    "place": "Núñez"
+  },
+  {
+    "trade": "plomeria",
+    "title": "Cambio de tanque y colector",
+    "place": "Vicente López"
+  },
+  {
+    "trade": "gas",
+    "title": "Instalación de calefón",
+    "place": "Saavedra"
+  }
+]

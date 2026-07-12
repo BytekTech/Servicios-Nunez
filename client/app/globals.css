@@ -22,6 +22,65 @@
   --color-status-dot: #2ecc71;
   --color-wa: #1da851;
   --color-wa-dark: #178a43;
+  --color-elec: #ffcc00;
+  --color-elec-soft: #fff9e6;
+  --color-agua: #00b4d8;
+  --color-agua-soft: #e0f2fe;
+  --color-flame: #f97316;
+  --color-flame-soft: #ffedd5;
+  --color-star: #e8a412;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+  }
+
+  .rise {
+    animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .rise-2 {
+    animation-delay: 0.09s;
+  }
+  .rise-3 {
+    animation-delay: 0.18s;
+  }
+  .rise-4 {
+    animation-delay: 0.27s;
+  }
+
+  @keyframes grow-x {
+    from {
+      transform: scaleX(0);
+    }
+  }
+
+  .grow-x {
+    transform-origin: left;
+    animation: grow-x 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .grow-x-2 {
+    animation-delay: 0.15s;
+  }
+  .grow-x-3 {
+    animation-delay: 0.3s;
+  }
+
+  .reveal-ready .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 0.5s ease,
+      transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal-ready .reveal.in-view {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 body {

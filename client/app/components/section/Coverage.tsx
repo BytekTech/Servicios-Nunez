@@ -9,13 +9,13 @@ export default function Coverage() {
   
   return (
     <div className="border-b border-line px-5 py-6 lg:px-8 xl:px-14">
-      <SectionLabel className="mb-3.5">ZONA DE COBERTURA</SectionLabel>
+      <SectionLabel className="reveal mb-3.5">ZONA DE COBERTURA</SectionLabel>
       <div className="flex flex-col">
         {COVERAGE_ZONES.map((zone) => (
           <Zone key={zone.zone} zone={zone.zone} detail={zone.detail} />
         ))}
       </div>
-      <p className="mt-3.5 text-[13.5px] text-ink-muted">
+      <p className="mt-3.5 text-[13.5px] text-ink-muted xl:text-[15.5px]">
         Consultanos por tu zona antes de pedir la visita.
       </p>
     </div>

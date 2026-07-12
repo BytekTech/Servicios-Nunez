@@ -4,29 +4,45 @@ export default function FaqItem({
   faq,
   isOpen,
   onToggle,
+  accentText = "text-blue",
 }: Readonly<{
   faq: Faq;
   isOpen: boolean;
   onToggle: () => void;
+  accentText?: string;
 }>) {
   return (
-    <div className="border-b border-line-soft">
+    <div className="reveal border-b border-line-soft">
       <button
         type="button"
         aria-expanded={isOpen}
         onClick={onToggle}
         className="flex min-h-11 w-full cursor-pointer select-none items-center justify-between gap-3 py-[15px] text-left"
       >
-        <span className="text-[15px] leading-[1.3] font-semibold lg:text-[16.5px]">{faq.q}</span>
-        <span className="flex-none font-mono text-[24px] leading-none text-blue">
-          {isOpen ? "–" : "+"}
+        <span className="text-[15px] leading-[1.3] font-semibold lg:text-[16.5px] xl:text-[18.5px]">{faq.q}</span>
+        <span
+          className={`flex-none font-mono text-[24px] leading-none transition-transform duration-200 xl:text-[27px] ${accentText} ${
+            isOpen ? "rotate-45" : ""
+          }`}
+        >
+          +
         </span>
       </button>
-      {isOpen && (
-        <p className="pr-6 pb-4 text-[14.5px] leading-[1.55] text-pretty text-ink-soft lg:text-[15.5px]">
-          {faq.a}
-        </p>
-      )}
+      <div
+        className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+          isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <p
+            className={`pr-6 pb-4 text-[14.5px] leading-[1.55] text-pretty text-ink-soft transition-opacity duration-300 lg:text-[15.5px] xl:max-w-[900px] xl:text-[17px] ${
+              isOpen ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {faq.a}
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

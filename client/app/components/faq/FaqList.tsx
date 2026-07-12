@@ -4,7 +4,10 @@ import { useState } from "react";
 import type { Faq } from "../../types/trade";
 import FaqItem from "./FaqItem";
 
-export default function FaqList({ faqs }: Readonly<{ faqs: readonly Faq[] }>) {
+export default function FaqList({
+  faqs,
+  accentText,
+}: Readonly<{ faqs: readonly Faq[]; accentText?: string }>) {
   const [open, setOpen] = useState(-1);
 
   return (
@@ -15,6 +18,7 @@ export default function FaqList({ faqs }: Readonly<{ faqs: readonly Faq[] }>) {
           faq={f}
           isOpen={open === i}
           onToggle={() => setOpen(open === i ? -1 : i)}
+          accentText={accentText}
         />
       ))}
     </div>

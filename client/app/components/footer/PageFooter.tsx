@@ -15,20 +15,20 @@ export default function PageFooter({
       <SocialLinks waHref={waHref} />
       <div className="flex flex-col gap-2">
         {note && (
-          <span className="font-mono text-[10.5px] tracking-[1.5px] text-ink-muted lg:text-[12px]">
+          <span className="font-mono text-[10.5px] tracking-[1.5px] text-ink-muted lg:text-[12px] xl:text-[13.5px]">
             {note}
           </span>
         )}
         <Link
           href="/terminos"
-          className="select-none font-mono text-[10.5px] tracking-[1.5px] text-ink-muted underline-offset-2 hover:underline lg:text-[12px]"
+          className="select-none font-mono text-[10.5px] tracking-[1.5px] text-ink-muted underline-offset-2 hover:underline lg:text-[12px] xl:text-[13.5px]"
         >
           TÉRMINOS Y CONDICIONES
         </Link>
-        <span className="font-mono text-[10.5px] tracking-[1.5px] text-ink-faint lg:text-[12px]">
+        <span className="font-mono text-[10.5px] tracking-[1.5px] text-ink-faint lg:text-[12px] xl:text-[13.5px]">
           {brand}
         </span>
-        <span className="font-mono text-[9.5px] tracking-[1.5px] text-ink-faint lg:text-[11px]">
+        <span className="font-mono text-[9.5px] tracking-[1.5px] text-ink-faint lg:text-[11px] xl:text-[12.5px]">
           POWERED BY BYTEK TECHNOLOGY
         </span>
       </div>

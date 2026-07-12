@@ -9,9 +9,11 @@ import PageFooter from "../../components/footer/PageFooter";
 import WhatsAppBar from "../../components/whatsapp/WhatsAppBar";
 import HowWeWork from "../../components/section/HowWeWork";
 import TradeServices from "../../components/trade/TradeServices";
+import ImageSlot from "../../components/ui/ImageSlot";
 import tradesData from "@/public/data/trades.json";
 import type { Trade } from "../../types/trade";
 import { waLink } from "../../lib/trades";
+import { tradeAccent } from "../../lib/tradeAccent";
 
 type Params = Promise<{ trade: string }>;
 
@@ -44,25 +46,33 @@ export default async function TradePage({
   if (!trade) notFound();
 
   const wa = waLink(trade.waMsg);
+  const accent = tradeAccent(trade.slug);
   return (
     <>
       <BackHeader />
       <StatusBar />
       <Hero
-        label={`${trade.code} — ${trade.name.toUpperCase()}`}
+        label={trade.name.toUpperCase()}
         title={trade.tagline}
+        accent={accent.text}
       >
         {trade.urgent && (
-          <p className="mt-4 rounded-[4px] bg-navy px-3.5 py-[13px] text-[14.5px] leading-[1.45] text-pretty text-paper lg:text-[16px]">
+          <p className="rise rise-3 mt-4 max-w-[80ch] rounded-[4px] bg-navy px-3.5 py-[13px] text-[14.5px] leading-[1.45] text-pretty text-paper lg:text-[16px] xl:text-[17.5px]">
             {trade.urgent}
           </p>
         )}
+        <ImageSlot
+          label={`FOTO · TRABAJO DE ${trade.name.toUpperCase()}`}
+          className={`rise rise-4 mt-5 aspect-[16/9] w-full lg:aspect-[21/9] xl:aspect-[3/1] ${accent.soft}`}
+        />
       </Hero>
       <TradeServices trade={trade} />
-      <HowWeWork />
+      <HowWeWork tradeSlug={trade.slug} />
       <div className="px-5 pt-6 pb-2.5 lg:px-8 lg:pb-6 xl:px-14">
-        <SectionLabel className="mb-1.5">PREGUNTAS FRECUENTES</SectionLabel>
-        <FaqList faqs={trade.faqs} />
+        <SectionLabel className="reveal mb-1.5" accent={accent.text}>
+          PREGUNTAS FRECUENTES
+        </SectionLabel>
+        <FaqList faqs={trade.faqs} accentText={accent.text} />
       </div>
       <PageFooter
         waHref={wa}
