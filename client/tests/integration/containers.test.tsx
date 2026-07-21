@@ -12,21 +12,24 @@ import steps from "@/public/data/steps.json";
 import trades from "@/public/data/trades.json";
 
 describe("Testimonials (reads testimonials.json)", () => {
-  it("renders one figure per testimonial in the JSON", () => {
+  it("renders one real (non-duplicated) figure per testimonial in the JSON", () => {
     const { container } = render(<Testimonials />);
-    expect(container.querySelectorAll("figure")).toHaveLength(
-      testimonials.length
-    );
+    // El carrusel infinito duplica las cards; las copias van con aria-hidden.
+    // Las figuras "reales" (una por testimonio) son las que NO están ocultas.
+    expect(
+      container.querySelectorAll("figure:not([aria-hidden])")
+    ).toHaveLength(testimonials.length);
   });
 
   it("renders content from specific testimonials", () => {
     render(<Testimonials />);
-    expect(screen.getByText("MARIANA G.")).toBeInTheDocument();
-    expect(screen.getByText("SILVIA R.")).toBeInTheDocument();
+    // Aparece en cada copia del loop, así que hay al menos una ocurrencia.
+    expect(screen.getAllByText("MARIANA G.").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("SILVIA R.").length).toBeGreaterThan(0);
     // A quote fragment from the JSON.
     expect(
-      screen.getByText(/Gasista con matrícula de verdad/)
-    ).toBeInTheDocument();
+      screen.getAllByText(/Gasista con matrícula de verdad/).length
+    ).toBeGreaterThan(0);
   });
 });
 

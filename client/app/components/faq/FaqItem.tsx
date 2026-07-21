@@ -35,7 +35,7 @@ export default function FaqItem({
       >
         <div className="overflow-hidden">
           <p
-            className={`pr-6 pb-4 text-[14.5px] leading-[1.55] text-pretty text-ink-soft transition-opacity duration-300 lg:text-[15.5px] xl:max-w-[900px] xl:text-[17px] ${
+            className={`ml-4 pr-6 pb-4 text-[14.5px] leading-[1.55] text-pretty text-ink-soft transition-opacity duration-300 lg:ml-5 lg:text-[15.5px] xl:max-w-[1120px] xl:text-[17px] 2xl:max-w-[1240px] ${
               isOpen ? "opacity-100" : "opacity-0"
             }`}
           >

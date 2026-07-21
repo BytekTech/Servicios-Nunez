@@ -29,7 +29,15 @@ export default function PageFooter({
           {brand}
         </span>
         <span className="font-mono text-[9.5px] tracking-[1.5px] text-ink-faint lg:text-[11px] xl:text-[12.5px]">
-          POWERED BY BYTEK TECHNOLOGY
+          POWERED BY{" "}
+          <a
+            href="https://bytektechnology.com"
+            target="_blank"
+            rel="noopener"
+            className="underline-offset-2 hover:text-blue hover:underline"
+          >
+            BYTEK TECHNOLOGY
+          </a>
         </span>
       </div>
     </footer>

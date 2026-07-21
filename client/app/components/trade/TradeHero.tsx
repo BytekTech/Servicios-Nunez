@@ -17,23 +17,19 @@ export default function TradeHero({
   imageAlt: string;
 }>) {
   return (
-    <section className="bleed relative flex min-h-[100svh] flex-col justify-start overflow-hidden">
+    <section className="bleed relative flex flex-1 flex-col justify-start overflow-hidden">
       <Image
         src={imageSrc}
         alt={imageAlt}
         fill
         priority
+        quality={90}
         sizes="100vw"
         className="object-cover"
       />
-      {/* 
-        El cambio está en la siguiente línea:
-        Se reemplazó bg-gradient-to-t por bg-gradient-to-b 
-        y se eliminó lg:bg-gradient-to-b
-      */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/30 to-transparent"
+        className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/20 to-transparent"
       />
       <div className="relative mx-auto w-full max-w-[520px] px-5 pt-24 pb-14 md:max-w-[760px] lg:max-w-[1040px] lg:px-8 lg:pt-28 lg:pb-20 xl:max-w-[1200px] xl:px-14 xl:pt-32 2xl:max-w-[1320px]">
         <SectionLabel className="rise mb-3.5" accent={accentText}>
@@ -47,6 +43,22 @@ export default function TradeHero({
             {urgent}
           </p>
         )}
+      </div>
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-6 flex justify-center lg:bottom-8"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="size-7 animate-scroll-hint text-paper/80 lg:size-9"
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
       </div>
     </section>
   );

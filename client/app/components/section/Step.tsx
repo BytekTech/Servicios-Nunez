@@ -1,18 +1,22 @@
+import type { TradeAccent } from "../../lib/tradeAccent";
+
 export default function Step({
   code,
   title,
   detail,
-  codeClass = "text-blue",
+  accent,
 }: Readonly<{
   code: string;
   title: string;
   detail: string;
-  codeClass?: string;
+  accent: TradeAccent;
 }>) {
   return (
-    <div className="reveal flex h-full flex-col gap-2 rounded-2xl border border-line bg-paper px-5 py-5 shadow-[0_1px_2px_rgb(18_35_61/0.05)] lg:gap-2.5 lg:px-6 lg:py-7">
+    <div
+      className={`reveal flex h-full flex-col gap-2 rounded-2xl border border-line bg-paper px-5 py-5 shadow-[0_1px_2px_rgb(18_35_61/0.05)] transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 ${accent.borderHover} ${accent.shadowHover} lg:gap-2.5 lg:px-6 lg:py-7`}
+    >
       <span
-        className={`font-mono text-[15px] leading-none font-bold tracking-[1px] lg:text-[17px] xl:text-[19px] ${codeClass}`}
+        className={`font-mono text-[15px] leading-none font-bold tracking-[1px] lg:text-[17px] xl:text-[19px] ${accent.text}`}
       >
         {code}
       </span>

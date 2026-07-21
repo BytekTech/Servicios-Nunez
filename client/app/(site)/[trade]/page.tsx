@@ -48,16 +48,18 @@ export default async function TradePage({
   const accent = tradeAccent(trade.slug);
   return (
     <>
-      <BackHeader />
-      <StatusBar />
-      <TradeHero
-        label={trade.name.toUpperCase()}
-        title={trade.tagline}
-        urgent={trade.urgent}
-        accentText={accent.text}
-        imageSrc={trade.background}
-        imageAlt={`Trabajo de ${trade.name} — Servicios Nuñez`}
-      />
+      <div className="flex min-h-[100svh] flex-col">
+        <BackHeader />
+        <StatusBar />
+        <TradeHero
+          label={trade.name.toUpperCase()}
+          title={trade.tagline}
+          urgent={trade.urgent}
+          accentText={accent.text}
+          imageSrc={trade.background}
+          imageAlt={`Trabajo de ${trade.name} — Servicios Nuñez`}
+        />
+      </div>
       <TradeServices trade={trade} />
       <HowWeWork tradeSlug={trade.slug} />
       <div className="px-5 pt-6 pb-2.5 lg:px-8 lg:pb-6 xl:px-14">

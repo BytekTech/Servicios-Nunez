@@ -23,7 +23,7 @@ export default function HowWeWork({
             code={step.code}
             title={step.title}
             detail={step.detail}
-            codeClass={accent.text}
+            accent={accent}
           />
         ))}
       </div>

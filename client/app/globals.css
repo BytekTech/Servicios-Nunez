@@ -31,56 +31,98 @@
   --color-star: #e8a412;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  @keyframes rise {
-    from {
-      opacity: 0;
-      transform: translateY(14px);
-    }
-  }
-
-  .rise {
-    animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
-  }
-  .rise-2 {
-    animation-delay: 0.09s;
-  }
-  .rise-3 {
-    animation-delay: 0.18s;
-  }
-  .rise-4 {
-    animation-delay: 0.27s;
-  }
-
-  @keyframes grow-x {
-    from {
-      transform: scaleX(0);
-    }
-  }
-
-  .grow-x {
-    transform-origin: left;
-    animation: grow-x 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
-  }
-  .grow-x-2 {
-    animation-delay: 0.15s;
-  }
-  .grow-x-3 {
-    animation-delay: 0.3s;
-  }
-
-  .reveal-ready .reveal {
+/* Animaciones de entrada (rise), regla tricolor (grow-x) y aparición por scroll
+   (reveal). Corren siempre — el usuario pidió verlas aunque el sistema tenga
+   "reducir movimiento" activo, por eso no van bajo @media prefers-reduced-motion. */
+@keyframes rise {
+  from {
     opacity: 0;
     transform: translateY(14px);
-    transition:
-      opacity 0.5s ease,
-      transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
   }
+}
 
-  .reveal-ready .reveal.in-view {
-    opacity: 1;
-    transform: none;
+.rise {
+  animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.rise-2 {
+  animation-delay: 0.09s;
+}
+.rise-3 {
+  animation-delay: 0.18s;
+}
+.rise-4 {
+  animation-delay: 0.27s;
+}
+
+@keyframes grow-x {
+  from {
+    transform: scaleX(0);
   }
+}
+
+.grow-x {
+  transform-origin: left;
+  animation: grow-x 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.grow-x-2 {
+  animation-delay: 0.15s;
+}
+.grow-x-3 {
+  animation-delay: 0.3s;
+}
+
+.reveal-ready .reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-ready .reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Carrusel infinito de opiniones (derecha → izquierda). El track lleva dos
+   copias de las cards, así translateX(-50%) reinicia sin salto. Corre siempre
+   (fuera del gate de reduced-motion) porque es un pedido explícito. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 45s linear infinite;
+}
+
+/* Pausa al pasar el mouse, SOLO en dispositivos con puntero real (no táctiles):
+   en touch, (hover: hover) es falso y el carrusel nunca se frena por "hover". */
+@media (hover: hover) {
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* Flecha indicadora de scroll en el hero de servicios: rebote de arriba hacia abajo. */
+@keyframes scroll-hint {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(9px);
+    opacity: 1;
+  }
+}
+
+.animate-scroll-hint {
+  animation: scroll-hint 1.5s ease-in-out infinite;
 }
 
 body {
@@ -90,6 +132,14 @@ body {
     linear-gradient(90deg, rgb(18 35 61 / 0.04) 1px, transparent 1px);
   background-size: 28px 28px;
   overflow-x: hidden;
+}
+
+/* Barra de scroll oculta (el scroll sigue funcionando). */
+html {
+  scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
 .bleed {

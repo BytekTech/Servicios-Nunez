@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import Step from "@/app/components/section/Step";
 import Zone from "@/app/components/section/Zone";
+import { tradeAccent } from "@/app/lib/tradeAccent";
 
 describe("Step", () => {
   it("renders code, title and detail", () => {
@@ -10,6 +11,7 @@ describe("Step", () => {
         code="01"
         title="Escribinos por WhatsApp"
         detail="Contanos el problema."
+        accent={tradeAccent("electricidad")}
       />
     );
     expect(screen.getByText("01")).toBeInTheDocument();
