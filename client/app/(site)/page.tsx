@@ -3,6 +3,7 @@ import Coverage from "../components/section/Coverage";
 import HowWeWork from "../components/section/HowWeWork";
 import Image from "next/image";
 import SectionLabel from "../components/ui/SectionLabel";
+import ScrollHintArrow from "../components/ui/ScrollHintArrow";
 import Testimonials from "../components/testimonials/Testimonials";
 import PageFooter from "../components/footer/PageFooter";
 import WhatsAppBar from "../components/whatsapp/WhatsAppBar";
@@ -45,22 +46,7 @@ export default function Home() {
             video detallado del problema y el presupuesto no se cobra.
           </p>
         </div>
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-x-0 bottom-6 flex justify-center lg:bottom-8"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="size-7 animate-scroll-hint text-paper/80 lg:size-9"
-          >
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </div>
+        <ScrollHintArrow />
         </section>
       </div>
       <TradesNav />
