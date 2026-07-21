@@ -9,6 +9,7 @@ export type Trade = {
   name: string;
   line: string;
   tagline: string;
+  background: string;
   cred: string;
   urgent: string;
   waMsg: string;

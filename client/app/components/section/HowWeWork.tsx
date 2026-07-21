@@ -12,11 +12,11 @@ export default function HowWeWork({
   const accent = tradeAccent(tradeSlug);
 
   return (
-    <div className="px-5 py-6 lg:px-8 xl:px-14">
-      <SectionLabel className="reveal mb-1.5" accent={accent.text}>
+    <div className="px-5 py-6 lg:px-8 lg:py-9 xl:px-14 xl:py-11">
+      <SectionLabel className="reveal mb-4" accent={accent.text}>
         CÓMO TRABAJAMOS
       </SectionLabel>
-      <div className="flex flex-col">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-5">
         {WORK_STEPS.map((step) => (
           <Step
             key={step.code}

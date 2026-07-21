@@ -3,13 +3,12 @@ import { notFound } from "next/navigation";
 import StatusBar from "../../components/header/StatusBar";
 import BackHeader from "../../components/header/BackHeader";
 import SectionLabel from "../../components/ui/SectionLabel";
-import Hero from "../../components/ui/Hero";
+import TradeHero from "../../components/trade/TradeHero";
 import FaqList from "../../components/faq/FaqList";
 import PageFooter from "../../components/footer/PageFooter";
 import WhatsAppBar from "../../components/whatsapp/WhatsAppBar";
 import HowWeWork from "../../components/section/HowWeWork";
 import TradeServices from "../../components/trade/TradeServices";
-import ImageSlot from "../../components/ui/ImageSlot";
 import tradesData from "@/public/data/trades.json";
 import type { Trade } from "../../types/trade";
 import { waLink } from "../../lib/trades";
@@ -51,21 +50,14 @@ export default async function TradePage({
     <>
       <BackHeader />
       <StatusBar />
-      <Hero
+      <TradeHero
         label={trade.name.toUpperCase()}
         title={trade.tagline}
-        accent={accent.text}
-      >
-        {trade.urgent && (
-          <p className="rise rise-3 mt-4 max-w-[80ch] rounded-[4px] bg-navy px-3.5 py-[13px] text-[14.5px] leading-[1.45] text-pretty text-paper lg:text-[16px] xl:text-[17.5px]">
-            {trade.urgent}
-          </p>
-        )}
-        <ImageSlot
-          label={`FOTO · TRABAJO DE ${trade.name.toUpperCase()}`}
-          className={`rise rise-4 mt-5 aspect-[16/9] w-full lg:aspect-[21/9] xl:aspect-[3/1] ${accent.soft}`}
-        />
-      </Hero>
+        urgent={trade.urgent}
+        accentText={accent.text}
+        imageSrc={trade.background}
+        imageAlt={`Trabajo de ${trade.name} — Servicios Nuñez`}
+      />
       <TradeServices trade={trade} />
       <HowWeWork tradeSlug={trade.slug} />
       <div className="px-5 pt-6 pb-2.5 lg:px-8 lg:pb-6 xl:px-14">

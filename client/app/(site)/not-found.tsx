@@ -4,14 +4,16 @@ import Hero from "../components/ui/Hero";
 export default function NotFound() {
   return (
     <>
-      <header className="flex items-center justify-between border-b border-line px-5 py-4 lg:px-8 xl:px-14">
-        <span className="font-mono text-xs tracking-[1px] text-blue lg:text-[13px]">
-          ERROR 404
-        </span>
-        <span className="text-[15px] font-extrabold tracking-[-0.2px] lg:text-[17px]">
-          NUÑEZ
-        </span>
-      </header>
+      <div className="bleed border-b border-line">
+        <header className="mx-auto flex w-full max-w-[520px] items-center justify-between px-5 py-4 md:max-w-[760px] lg:max-w-[1040px] lg:px-8 xl:max-w-[1200px] xl:px-14 2xl:max-w-[1320px]">
+          <span className="font-mono text-xs tracking-[1px] text-blue lg:text-[13px]">
+            ERROR 404
+          </span>
+          <span className="text-[15px] font-extrabold tracking-[-0.2px] lg:text-[17px]">
+            NUÑEZ
+          </span>
+        </header>
+      </div>
       <Hero label="PÁGINA NO ENCONTRADA" title="Esta página no existe.">
         <p className="mt-3 text-[15.5px] leading-normal text-pretty text-ink-soft lg:text-[17px]">
           La dirección que ingresaste no corresponde a ninguna sección del

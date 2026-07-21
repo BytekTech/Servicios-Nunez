@@ -10,7 +10,7 @@ export default function TestimonialItem({
   rating: number;
 }>) {
   return (
-    <figure className="reveal flex flex-col items-center gap-2 border-b border-line-soft py-[15px] text-center">
+    <figure className="reveal flex h-full flex-col items-center gap-2.5 rounded-2xl border border-line bg-paper px-6 py-6 text-center shadow-[0_1px_2px_rgb(18_35_61/0.05)] transition-shadow hover:shadow-[0_6px_20px_rgb(18_35_61/0.08)] lg:px-7 lg:py-7">
       <span
         aria-label={`${rating} de 5 estrellas`}
         className="text-[11px] tracking-[3px] text-star lg:text-[12.5px] xl:text-[14px]"
@@ -18,10 +18,10 @@ export default function TestimonialItem({
         {"★".repeat(rating)}
         <span className="text-ink-faint">{"☆".repeat(5 - rating)}</span>
       </span>
-      <blockquote className="max-w-[640px] text-[15px] leading-[1.5] text-pretty lg:text-[16.5px] xl:max-w-[840px] xl:text-[18.5px]">
+      <blockquote className="text-[15px] leading-[1.5] text-pretty lg:text-[16.5px] xl:text-[18.5px]">
         “{quote}”
       </blockquote>
-      <figcaption className="font-mono text-[11px] tracking-[1.2px] text-ink-muted lg:text-[12.5px] xl:text-[14px]">
+      <figcaption className="mt-auto font-mono text-[11px] tracking-[1.2px] text-ink-muted lg:text-[12.5px] xl:text-[14px]">
         <span className="font-bold text-ink-soft">{name}</span> · {detail}
       </figcaption>
     </figure>

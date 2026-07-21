@@ -8,9 +8,9 @@ export default function RecentWorks() {
   const RECENT_WORKS = worksData as RecentWork[];
 
   return (
-    <div className="border-y border-line px-5 py-6 lg:px-8 xl:px-14">
+    <div className="border-y border-line px-5 py-6 lg:px-8 lg:py-9 xl:px-14 xl:py-11">
       <SectionLabel className="reveal mb-4">TRABAJOS RECIENTES</SectionLabel>
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-6">
         {RECENT_WORKS.map((work) => (
           <WorkItem key={work.title} work={work} />
         ))}

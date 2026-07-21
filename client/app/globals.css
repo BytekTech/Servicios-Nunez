@@ -89,4 +89,10 @@ body {
     linear-gradient(rgb(18 35 61 / 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgb(18 35 61 / 0.04) 1px, transparent 1px);
   background-size: 28px 28px;
+  overflow-x: hidden;
+}
+
+.bleed {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }

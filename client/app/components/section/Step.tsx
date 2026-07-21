@@ -10,17 +10,17 @@ export default function Step({
   codeClass?: string;
 }>) {
   return (
-    <div className="reveal flex gap-4 border-b border-line-soft py-[13px]">
+    <div className="reveal flex h-full flex-col gap-2 rounded-2xl border border-line bg-paper px-5 py-5 shadow-[0_1px_2px_rgb(18_35_61/0.05)] lg:gap-2.5 lg:px-6 lg:py-7">
       <span
-        className={`font-mono text-[13px] leading-[1.4] font-bold lg:text-[14px] xl:text-[15.5px] ${codeClass}`}
+        className={`font-mono text-[15px] leading-none font-bold tracking-[1px] lg:text-[17px] xl:text-[19px] ${codeClass}`}
       >
         {code}
       </span>
-      <span className="flex flex-col gap-0.5">
-        <span className="text-[15px] leading-[1.3] font-semibold lg:text-[16.5px] xl:text-[18.5px]">{title}</span>
-        <span className="text-[13.5px] leading-[1.5] text-ink-muted lg:text-[15px] xl:text-[17px]">
-          {detail}
-        </span>
+      <span className="text-[16.5px] leading-[1.25] font-semibold lg:text-[18.5px] xl:text-[20.5px]">
+        {title}
+      </span>
+      <span className="text-[14px] leading-[1.5] text-ink-muted lg:text-[15.5px] xl:text-[17px]">
+        {detail}
       </span>
     </div>
   );

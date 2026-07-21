@@ -38,7 +38,7 @@ export default function RootLayout({
       <body className="font-sans text-ink">
         <ScrollReveal />
         <div className="min-h-screen w-full bg-paper">
-          <div className="mx-auto flex min-h-screen w-full max-w-[520px] flex-col pb-[118px] md:max-w-[760px] lg:max-w-[880px] lg:pb-[96px] xl:max-w-none xl:pb-[104px]">
+          <div className="mx-auto flex min-h-screen w-full max-w-[520px] flex-col pb-[118px] md:max-w-[760px] lg:max-w-[1040px] lg:pb-[96px] xl:max-w-[1200px] xl:pb-[104px] 2xl:max-w-[1320px]">
             {children}
           </div>
         </div>

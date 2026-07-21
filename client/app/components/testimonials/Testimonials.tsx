@@ -7,11 +7,11 @@ import TestimonialItem from "./TestimonialItem";
 export default function Testimonials() {
   const TESTIMONIALS = testimonialsData as Testimonial[];
   return (
-    <div className="px-5 py-6 lg:px-8 xl:px-14">
-      <SectionLabel className="reveal mb-1.5">
+    <div className="px-5 py-6 lg:px-8 lg:py-9 xl:px-14 xl:py-11">
+      <SectionLabel className="reveal mb-4">
         LO QUE DICEN LOS CLIENTES
       </SectionLabel>
-      <div className="mx-auto flex w-full max-w-[760px] flex-col xl:max-w-[960px]">
+      <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {TESTIMONIALS.map((testimonial) => (
           <TestimonialItem
             key={testimonial.name}

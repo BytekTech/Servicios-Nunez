@@ -24,7 +24,7 @@ export default function TermsPage() {
     <>
       <BackHeader />
       <Hero label="LEGALES" title="Términos y condiciones.">
-        <p className="mt-3 font-mono text-[11px] tracking-[1.2px] text-ink-muted lg:text-[12.5px]">
+        <p className="mt-3 ml-8 font-mono text-[11px] tracking-[1.2px] text-ink-muted lg:ml-10 lg:text-[13px] xl:text-[14.5px]">
           ÚLTIMA ACTUALIZACIÓN · 11 JUL 2026
         </p>
       </Hero>
@@ -37,7 +37,7 @@ export default function TermsPage() {
             body={section.body}
           />
         ))}
-        <p className="py-5 text-[14px] leading-[1.6] text-ink-muted lg:text-[15.5px]">
+        <p className="py-5 text-[14px] leading-[1.6] text-ink-muted lg:text-[16.5px] xl:text-[18.5px]">
           ¿Tenés dudas sobre estos términos? Escribinos por WhatsApp y te
           respondemos en minutos.
         </p>

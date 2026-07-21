@@ -8,14 +8,14 @@ export default function Coverage() {
   const COVERAGE_ZONES = zonesData as CoverageZone[];
   
   return (
-    <div className="border-b border-line px-5 py-6 lg:px-8 xl:px-14">
+    <div className="border-b border-line px-5 py-6 lg:px-8 lg:py-9 xl:px-14 xl:py-11">
       <SectionLabel className="reveal mb-3.5">ZONA DE COBERTURA</SectionLabel>
-      <div className="flex flex-col">
+      <div className="grid grid-cols-1 gap-x-8 sm:grid-cols-2">
         {COVERAGE_ZONES.map((zone) => (
           <Zone key={zone.zone} zone={zone.zone} detail={zone.detail} />
         ))}
       </div>
-      <p className="mt-3.5 text-[13.5px] text-ink-muted xl:text-[15.5px]">
+      <p className="mt-4 text-[14px] text-ink-muted lg:text-[15px] xl:text-[16.5px]">
         Consultanos por tu zona antes de pedir la visita.
       </p>
     </div>
