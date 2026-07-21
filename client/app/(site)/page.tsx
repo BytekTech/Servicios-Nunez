@@ -34,7 +34,7 @@ export default function Home() {
         </p>
         <div className="rise rise-4 relative mt-5 aspect-[16/9] w-full overflow-hidden rounded-[6px] border border-line lg:mt-6 lg:aspect-[21/9] xl:aspect-[3/1]">
           <Image
-            src="/images/hero-servicios.png"
+            src="/images/gasista.webp"
             alt="Técnico matriculado de Servicios Nuñez reparando un calefón"
             fill
             priority
