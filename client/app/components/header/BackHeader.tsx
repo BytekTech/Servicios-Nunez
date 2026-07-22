@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { CONTENT_WIDTH } from "../../lib/container";
 
 export default function BackHeader() {
   return (
     <div className="bleed border-b border-line">
-      <header className="mx-auto flex w-full max-w-[520px] items-center justify-between px-5 py-4 md:max-w-[760px] lg:max-w-[1040px] lg:px-8 xl:max-w-[1200px] xl:px-14 2xl:max-w-[1320px]">
+      <header className={`mx-auto flex w-full items-center justify-between px-5 py-4 lg:px-8 xl:px-14 ${CONTENT_WIDTH}`}>
         <Link
           href="/"
           className="select-none py-1.5 font-mono text-xs tracking-[1px] text-blue lg:text-[13px] xl:text-[14.5px]"

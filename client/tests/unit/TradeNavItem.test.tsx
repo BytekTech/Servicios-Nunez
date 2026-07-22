@@ -9,6 +9,7 @@ const trade: Trade = {
   name: "Electricidad",
   line: "tableros · cortos · instalaciones",
   tagline: "tagline",
+  background: "/images/electricista.webp",
   cred: "cred",
   urgent: "",
   waMsg: "msg",
@@ -23,10 +24,9 @@ describe("TradeNavItem", () => {
     expect(link).toHaveAttribute("href", "/electricidad");
   });
 
-  it("shows the trade name, code and line", () => {
+  it("shows the trade name and line", () => {
     render(<TradeNavItem trade={trade} />);
     expect(screen.getByText("Electricidad")).toBeInTheDocument();
-    expect(screen.getByText("01")).toBeInTheDocument();
     expect(
       screen.getByText("tableros · cortos · instalaciones")
     ).toBeInTheDocument();

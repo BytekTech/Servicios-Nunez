@@ -1,6 +1,7 @@
-import Image from "next/image";
+import HeroBackdrop from "../ui/HeroBackdrop";
 import SectionLabel from "../ui/SectionLabel";
 import ScrollHintArrow from "../ui/ScrollHintArrow";
+import { CONTENT_WIDTH } from "../../lib/container";
 
 export default function TradeHero({
   label,
@@ -19,20 +20,12 @@ export default function TradeHero({
 }>) {
   return (
     <section className="bleed relative flex flex-1 flex-col justify-start overflow-hidden">
-      <Image
+      <HeroBackdrop
         src={imageSrc}
         alt={imageAlt}
-        fill
-        priority
-        quality={90}
-        sizes="100vw"
-        className="object-cover"
+        overlayClassName="bg-gradient-to-b from-navy/60 via-navy/20 to-transparent"
       />
-      <div
-        aria-hidden
-        className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/20 to-transparent"
-      />
-      <div className="relative mx-auto w-full max-w-[520px] px-5 pt-24 pb-14 md:max-w-[760px] lg:max-w-[1040px] lg:px-8 lg:pt-28 lg:pb-20 xl:max-w-[1200px] xl:px-14 xl:pt-32 2xl:max-w-[1320px]">
+      <div className={`relative mx-auto w-full px-5 pt-24 pb-14 lg:px-8 lg:pt-28 lg:pb-20 xl:px-14 xl:pt-32 ${CONTENT_WIDTH}`}>
         <SectionLabel
           className="rise mb-3.5"
           accent={accentText}

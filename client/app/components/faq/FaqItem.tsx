@@ -29,6 +29,7 @@ export default function FaqItem({
         </span>
       </button>
       <div
+        aria-hidden={!isOpen}
         className={`grid transition-[grid-template-rows] duration-300 ease-out ${
           isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         }`}

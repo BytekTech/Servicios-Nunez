@@ -3,10 +3,9 @@ import type { CoverageZone } from "../../types/zone";
 import SectionLabel from "../ui/SectionLabel";
 import Zone from "./Zone";
 
+const COVERAGE_ZONES = zonesData as CoverageZone[];
 
 export default function Coverage() {
-  const COVERAGE_ZONES = zonesData as CoverageZone[];
-  
   return (
     <div className="border-b border-line px-5 py-6 lg:px-8 lg:py-9 xl:px-14 xl:py-11">
       <SectionLabel className="reveal mb-3.5">ZONA DE COBERTURA</SectionLabel>

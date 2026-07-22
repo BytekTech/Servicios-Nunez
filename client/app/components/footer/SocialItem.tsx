@@ -9,7 +9,7 @@ export default function SocialItem({
     <a
       href={contact}
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
       className="select-none rounded-[3px] border border-line-strong px-3 py-[9px] font-mono text-[11px] tracking-[1.2px] text-ink transition-colors duration-150 hover:border-blue hover:text-blue lg:text-[12.5px] xl:text-[14px]"
     >
       {content}

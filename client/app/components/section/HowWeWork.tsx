@@ -4,11 +4,11 @@ import { tradeAccent } from "../../lib/tradeAccent";
 import SectionLabel from "../ui/SectionLabel";
 import Step from "./Step";
 
+const WORK_STEPS = stepsData as WorkStep[];
 
 export default function HowWeWork({
   tradeSlug = "",
 }: Readonly<{ tradeSlug?: string }>) {
-  const WORK_STEPS = stepsData as WorkStep[];
   const accent = tradeAccent(tradeSlug);
 
   return (

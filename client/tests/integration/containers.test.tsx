@@ -65,7 +65,6 @@ describe("TradesNav (reads trades.json)", () => {
       );
       expect(link, `link for slug ${t.slug}`).toBeDefined();
       expect(link).toHaveTextContent(t.name);
-      expect(link).toHaveTextContent(t.code);
     }
   });
 });

@@ -2,9 +2,9 @@ import contactData from "@/public/data/contact.json";
 import type { Contact } from "../../types/contact";
 import SocialItem from "./SocialItem";
 
+const CONTACT = contactData as Contact;
 
 export default function SocialLinks({ waHref }: Readonly<{ waHref: string }>) {
-  const CONTACT = contactData as Contact;
   const social: string[][] = [
     ["WHATSAPP", waHref],
     ["INSTAGRAM", CONTACT.instagram]

@@ -58,9 +58,9 @@ describe("[trade] page (async Server Component)", () => {
     render(ui);
 
     const trade = trades.find((t) => t.slug === "electricidad")!;
-    // Hero label contains the code + uppercased name.
+    // El hero muestra el nombre del oficio en mayúsculas como etiqueta.
     expect(
-      screen.getByText(`${trade.code} — ${trade.name.toUpperCase()}`)
+      screen.getByText(trade.name.toUpperCase())
     ).toBeInTheDocument();
     // Tagline is the hero heading.
     expect(

@@ -33,7 +33,7 @@ export default function PageFooter({
           <a
             href="https://bytektechnology.com"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             className="underline-offset-2 hover:text-blue hover:underline"
           >
             BYTEK TECHNOLOGY

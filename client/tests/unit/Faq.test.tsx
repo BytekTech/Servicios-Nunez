@@ -10,21 +10,23 @@ const faqs: Faq[] = [
   { q: "¿Traés los materiales?", a: "Sí, de primera marca." },
 ];
 
+// La respuesta siempre está montada (se anima con grid-rows). El estado
+// abierto/cerrado se expone semánticamente: `aria-expanded` en el botón y el
+// ícono "+" que rota a "×" al abrir.
 describe("FaqItem (controlled)", () => {
-  it("hides the answer and shows + when closed", () => {
+  it("marks the item collapsed and the icon un-rotated when closed", () => {
     render(<FaqItem faq={faqs[0]} isOpen={false} onToggle={() => {}} />);
     const button = screen.getByRole("button", { name: /¿Cobrás la visita?/ });
     expect(button).toHaveAttribute("aria-expanded", "false");
-    expect(screen.queryByText("El presupuesto es sin cargo.")).not.toBeInTheDocument();
-    expect(screen.getByText("+")).toBeInTheDocument();
+    expect(screen.getByText("+")).not.toHaveClass("rotate-45");
   });
 
-  it("shows the answer and – when open", () => {
+  it("marks the item expanded and rotates the icon when open", () => {
     render(<FaqItem faq={faqs[0]} isOpen={true} onToggle={() => {}} />);
     const button = screen.getByRole("button", { name: /¿Cobrás la visita?/ });
     expect(button).toHaveAttribute("aria-expanded", "true");
     expect(screen.getByText("El presupuesto es sin cargo.")).toBeInTheDocument();
-    expect(screen.getByText("–")).toBeInTheDocument();
+    expect(screen.getByText("+")).toHaveClass("rotate-45");
   });
 
   it("calls onToggle when the button is clicked", async () => {
@@ -41,8 +43,9 @@ describe("FaqItem (controlled)", () => {
 describe("FaqList (open/close behavior with state)", () => {
   it("starts fully collapsed", () => {
     render(<FaqList faqs={faqs} />);
-    expect(screen.queryByText("El presupuesto es sin cargo.")).not.toBeInTheDocument();
-    expect(screen.queryByText("Sí, de primera marca.")).not.toBeInTheDocument();
+    for (const button of screen.getAllByRole("button")) {
+      expect(button).toHaveAttribute("aria-expanded", "false");
+    }
   });
 
   it("opens an item on click and closes it on a second click", async () => {
@@ -54,13 +57,9 @@ describe("FaqList (open/close behavior with state)", () => {
     });
 
     await user.click(firstButton);
-    expect(screen.getByText("El presupuesto es sin cargo.")).toBeInTheDocument();
     expect(firstButton).toHaveAttribute("aria-expanded", "true");
 
     await user.click(firstButton);
-    expect(
-      screen.queryByText("El presupuesto es sin cargo.")
-    ).not.toBeInTheDocument();
     expect(firstButton).toHaveAttribute("aria-expanded", "false");
   });
 
@@ -68,15 +67,18 @@ describe("FaqList (open/close behavior with state)", () => {
     const user = userEvent.setup();
     render(<FaqList faqs={faqs} />);
 
-    await user.click(screen.getByRole("button", { name: /¿Cobrás la visita?/ }));
-    expect(screen.getByText("El presupuesto es sin cargo.")).toBeInTheDocument();
+    const firstButton = screen.getByRole("button", {
+      name: /¿Cobrás la visita?/,
+    });
+    const secondButton = screen.getByRole("button", {
+      name: /¿Traés los materiales?/,
+    });
 
-    await user.click(
-      screen.getByRole("button", { name: /¿Traés los materiales?/ })
-    );
-    expect(screen.getByText("Sí, de primera marca.")).toBeInTheDocument();
-    expect(
-      screen.queryByText("El presupuesto es sin cargo.")
-    ).not.toBeInTheDocument();
+    await user.click(firstButton);
+    expect(firstButton).toHaveAttribute("aria-expanded", "true");
+
+    await user.click(secondButton);
+    expect(secondButton).toHaveAttribute("aria-expanded", "true");
+    expect(firstButton).toHaveAttribute("aria-expanded", "false");
   });
 });

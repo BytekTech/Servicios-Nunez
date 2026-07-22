@@ -2,10 +2,9 @@ import contactData from "@/public/data/contact.json";
 import type { Contact } from "../../types/contact";
 import WaButton from "./WaButton";
 
+const CONTACT = contactData as Contact;
 
 export default function Panel({ href }: Readonly<{ href: string }>) {
-  const CONTACT = contactData as Contact;
-  
   return (
     <div className="hidden flex-col gap-3 border-b border-line px-5 py-6 lg:flex lg:px-8 xl:px-14">
       <WaButton href={href} />
