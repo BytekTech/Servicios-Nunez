@@ -10,7 +10,7 @@ export default function TradeServices({ trade }: Readonly<{ trade: Trade }>) {
       <SectionLabel className="reveal mb-1.5" accent={accent.text}>
         QUÉ HACEMOS
       </SectionLabel>
-      <div className="grid grid-cols-1 gap-x-10 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-x-10 md:grid-cols-2">
         {trade.services.map((service) => (
           <TradeServiceItem
             key={service}

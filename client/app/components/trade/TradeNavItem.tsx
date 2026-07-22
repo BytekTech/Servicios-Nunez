@@ -15,11 +15,11 @@ export default function TradeNavItem({
     >
       <span className="flex min-w-0 flex-col gap-1 lg:gap-1.5">
         <span
-          className={`text-[21px] leading-none font-bold tracking-[-0.3px] lg:text-[30px] xl:text-[38px] 2xl:text-[42px] ${accent.text}`}
+          className={`text-[21px] leading-none font-bold tracking-[-0.3px] md:text-[26px] lg:text-[30px] xl:text-[38px] 2xl:text-[42px] ${accent.text}`}
         >
           {trade.name}
         </span>
-        <span className="font-mono text-[11px] tracking-[0.3px] text-ink-muted lg:text-[13.5px] xl:text-[15px]">
+        <span className="font-mono text-[11px] tracking-[0.3px] text-ink-muted md:text-[12.5px] lg:text-[13.5px] xl:text-[15px]">
           {trade.line}
         </span>
       </span>
@@ -28,7 +28,7 @@ export default function TradeNavItem({
         className={`size-7 transition-transform duration-200 group-hover:scale-110 lg:size-9 xl:size-11 ${accent.text}`}
       />
       <span
-        className={`justify-self-end text-[26px] transition-transform duration-200 group-hover:translate-x-1 lg:text-[34px] xl:text-[42px] ${accent.text}`}
+        className={`justify-self-end text-[26px] transition-transform duration-200 group-hover:translate-x-1 md:text-[30px] lg:text-[34px] xl:text-[42px] ${accent.text}`}
       >
         →
       </span>

@@ -18,15 +18,15 @@ export default function TestimonialItem({
     >
       <span
         aria-label={`${rating} de 5 estrellas`}
-        className="text-[11px] tracking-[3px] text-star lg:text-[12.5px] xl:text-[14px]"
+        className="text-[11px] tracking-[3px] text-star md:text-[12px] lg:text-[12.5px] xl:text-[14px]"
       >
         {"★".repeat(rating)}
         <span className="text-ink-faint">{"☆".repeat(5 - rating)}</span>
       </span>
-      <blockquote className="text-[15px] leading-[1.5] text-pretty lg:text-[16.5px] xl:text-[18.5px]">
+      <blockquote className="text-[15px] leading-[1.5] text-pretty md:text-[16px] lg:text-[16.5px] xl:text-[18.5px]">
         “{quote}”
       </blockquote>
-      <figcaption className="mt-auto font-mono text-[11px] tracking-[1.2px] text-ink-muted lg:text-[12.5px] xl:text-[14px]">
+      <figcaption className="mt-auto font-mono text-[11px] tracking-[1.2px] text-ink-muted md:text-[12px] lg:text-[12.5px] xl:text-[14px]">
         <span className="font-bold text-ink-soft">{name}</span> · {detail}
       </figcaption>
     </figure>

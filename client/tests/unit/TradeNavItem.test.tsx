@@ -9,6 +9,8 @@ const trade: Trade = {
   name: "Electricidad",
   line: "tableros · cortos · instalaciones",
   tagline: "tagline",
+  seoTitle: "Electricista matriculado en CABA y GBA",
+  keywords: [],
   background: "/images/electricista.webp",
   cred: "cred",
   urgent: "",

@@ -19,9 +19,9 @@ export default function FaqItem({
         onClick={onToggle}
         className="flex min-h-11 w-full cursor-pointer select-none items-center justify-between gap-3 py-[15px] text-left"
       >
-        <span className="text-[15px] leading-[1.3] font-semibold lg:text-[16.5px] xl:text-[18.5px]">{faq.q}</span>
+        <span className="text-[15px] leading-[1.3] font-semibold md:text-[16px] lg:text-[16.5px] xl:text-[18.5px]">{faq.q}</span>
         <span
-          className={`flex-none font-mono text-[24px] leading-none transition-transform duration-200 xl:text-[27px] ${accentText} ${
+          className={`flex-none font-mono text-[24px] leading-none transition-transform duration-200 md:text-[25px] xl:text-[27px] ${accentText} ${
             isOpen ? "rotate-45" : ""
           }`}
         >
@@ -36,7 +36,7 @@ export default function FaqItem({
       >
         <div className="overflow-hidden">
           <p
-            className={`ml-4 pr-6 pb-4 text-[14.5px] leading-[1.55] text-pretty text-ink-soft transition-opacity duration-300 lg:ml-5 lg:text-[15.5px] xl:max-w-[1120px] xl:text-[17px] 2xl:max-w-[1240px] ${
+            className={`ml-4 pr-6 pb-4 text-[14.5px] leading-[1.55] text-pretty text-ink-soft transition-opacity duration-300 md:text-[15px] lg:ml-5 lg:text-[15.5px] xl:max-w-[1120px] xl:text-[17px] 2xl:max-w-[1240px] ${
               isOpen ? "opacity-100" : "opacity-0"
             }`}
           >

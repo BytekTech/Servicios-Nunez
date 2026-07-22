@@ -1,7 +1,7 @@
 import zonesData from "@/public/data/zones.json";
 import type { CoverageZone } from "../../types/zone";
 import SectionLabel from "../ui/SectionLabel";
-import Zone from "./Zone";
+import Zone from "../seo/Zone";
 
 const COVERAGE_ZONES = zonesData as CoverageZone[];
 
@@ -14,7 +14,7 @@ export default function Coverage() {
           <Zone key={zone.zone} zone={zone.zone} detail={zone.detail} />
         ))}
       </div>
-      <p className="mt-4 text-[14px] text-ink-muted lg:text-[15px] xl:text-[16.5px]">
+      <p className="mt-4 text-[14px] text-ink-muted md:text-[14.5px] lg:text-[15px] xl:text-[16.5px]">
         Consultanos por tu zona antes de pedir la visita.
       </p>
     </div>

@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Celular en horizontal: viewport ancho pero muy bajo. Se combina orientación
+   con max-height para NO alcanzar a los monitores de escritorio (que también
+   son landscape, pero altos). Se usa para que los heroes no fuercen el alto
+   completo de pantalla y para achicar el padding vertical. */
+@custom-variant short-landscape (@media (orientation: landscape) and (max-height: 600px));
+
 @theme inline {
   --font-sans: var(--font-archivo), system-ui, sans-serif;
   --font-mono: var(--font-sometype), monospace;

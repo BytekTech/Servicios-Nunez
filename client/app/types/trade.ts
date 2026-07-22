@@ -9,6 +9,8 @@ export type Trade = {
   name: string;
   line: string;
   tagline: string;
+  seoTitle: string;
+  keywords: string[];
   background: string;
   cred: string;
   urgent: string;

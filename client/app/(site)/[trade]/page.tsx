@@ -9,10 +9,16 @@ import PageFooter from "../../components/footer/PageFooter";
 import WhatsAppBar from "../../components/whatsapp/WhatsAppBar";
 import HowWeWork from "../../components/section/HowWeWork";
 import TradeServices from "../../components/trade/TradeServices";
+import JsonLd from "../../components/seo/JsonLd";
 import tradesData from "@/public/data/trades.json";
 import type { Trade } from "../../types/trade";
 import { waLink } from "../../lib/trades";
 import { tradeAccent } from "../../lib/tradeAccent";
+import {
+  breadcrumbJsonLd,
+  faqJsonLd,
+  serviceJsonLd,
+} from "../../lib/structuredData";
 
 type Params = Promise<{ trade: string }>;
 
@@ -32,9 +38,26 @@ export async function generateMetadata({
 }>): Promise<Metadata> {
   const trade = findTrade((await params).trade);
   if (!trade) return {};
+  const path = `/${trade.slug}`;
+  const description = `${trade.tagline} ${trade.cred}`;
   return {
-    title: `${trade.name} — Servicios Nuñez`,
-    description: trade.tagline,
+    title: trade.seoTitle,
+    description,
+    keywords: trade.keywords,
+    alternates: { canonical: path },
+    openGraph: {
+      type: "website",
+      title: `${trade.seoTitle} · Servicios Nuñez`,
+      description,
+      url: path,
+      images: [{ url: trade.background, alt: `${trade.name} — Servicios Nuñez` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${trade.seoTitle} · Servicios Nuñez`,
+      description,
+      images: [trade.background],
+    },
   };
 }
 
@@ -48,7 +71,15 @@ export default async function TradePage({
   const accent = tradeAccent(trade.slug);
   return (
     <>
-      <div className="flex min-h-[100svh] flex-col">
+      <JsonLd data={serviceJsonLd(trade)} />
+      <JsonLd data={faqJsonLd(trade.faqs)} />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Inicio", path: "/" },
+          { name: trade.name, path: `/${trade.slug}` },
+        ])}
+      />
+      <div className="flex min-h-[100svh] flex-col short-landscape:min-h-0">
         <BackHeader />
         <StatusBar />
         <TradeHero

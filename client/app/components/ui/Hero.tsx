@@ -21,8 +21,8 @@ export default function Hero({
       <h1
         className={`rise rise-2 font-extrabold text-pretty ${
           big
-            ? "text-[34px] leading-[1.06] tracking-[-0.8px] lg:text-[44px] lg:leading-[1.04] lg:tracking-[-1.2px] xl:text-[54px] xl:tracking-[-1.6px] 2xl:text-[64px] 2xl:tracking-[-1.9px]"
-            : "text-[28px] leading-[1.12] tracking-[-0.6px] lg:text-[36px] lg:leading-[1.08] lg:tracking-[-0.9px] xl:text-[42px] xl:tracking-[-1.1px] 2xl:text-[50px] 2xl:tracking-[-1.4px]"
+            ? "text-[34px] leading-[1.06] tracking-[-0.8px] md:text-[40px] lg:text-[44px] lg:leading-[1.04] lg:tracking-[-1.2px] xl:text-[54px] xl:tracking-[-1.6px] 2xl:text-[64px] 2xl:tracking-[-1.9px]"
+            : "text-[28px] leading-[1.12] tracking-[-0.6px] md:text-[32px] lg:text-[36px] lg:leading-[1.08] lg:tracking-[-0.9px] xl:text-[42px] xl:tracking-[-1.1px] 2xl:text-[50px] 2xl:tracking-[-1.4px]"
         }`}
       >
         {title}

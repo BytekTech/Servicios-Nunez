@@ -2,7 +2,7 @@ export default function SectionLabel({
   children,
   className = "",
   accent = "text-blue",
-  textClassName = "text-[11px] lg:text-[13px] xl:text-[15px]",
+  textClassName = "text-[11px] md:text-[12px] lg:text-[13px] xl:text-[15px]",
 }: Readonly<{
   children: React.ReactNode;
   className?: string;
